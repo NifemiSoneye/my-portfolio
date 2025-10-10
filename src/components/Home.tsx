@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="pt-[6rem] text-white text-center bg-gradient-to-b from-[#1a1c20] to-[#222428] lg:grid grid-cols-2 lg:text-left lg:px-[5rem] lg:pt-[8rem] border-b border-gray-500 pb-[1rem]"
+      className="pt-[6rem] text-white text-center bg-gradient-to-b from-[#1a1c20] to-[#222428] lg:grid grid-cols-2 lg:text-left lg:px-[5rem] lg:pt-[8rem] border-b border-gray-500 pb-[1rem] min-h-screen items-center"
     >
       <div className="order-1 lg:order-1 lg:mt-[2rem] font-semibold">
         <h1 className="text-[48px]">Hey There ,</h1>
