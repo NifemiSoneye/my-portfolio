@@ -1,11 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Home = () => {
   const name: string[] = "Nifemi".split("");
   const devIcon = new URL("../assets/developer.png", import.meta.url).href;
   return (
-    <section id="home" className="pt-[6rem] text-white text-center">
+    <section
+      id="home"
+      className="pt-[6rem] text-white text-center bg-gradient-to-b from-[#1a1c20] to-[#222428]"
+    >
       <h1 className="text-[48px]">Hey There ,</h1>
       <motion.h1
         className="text-[48px]"
@@ -40,15 +44,42 @@ const Home = () => {
       </motion.h1>
       <p className="text-[24px] pt-[2rem]">A Frontend Developer</p>
       <div className="flex items-center justify-center mt-[2rem] ">
-        <div className="h-[300px] w-[300px] rounded-full bg-[#212A37] border-2 border-[#222428] flex items-center justify-center p-[1rem]">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 1.2, duration: 0.8, type: "spring" }}
+          className="h-[300px] w-[300px] rounded-full bg-[#212A37] border-2 border-[#222428] flex items-center justify-center p-[1rem]"
+        >
           <img
             src={devIcon}
             alt="dev"
-            className="h-[220px] w-[220px] p-[1rem] "
+            className="h-[220px] w-[220px] p-[1rem]"
           />
-        </div>
+        </motion.div>
       </div>
       <p className="italic mt-[1rem]">"Build for everyone with everyone"</p>
+      <button className="bg-transparent border mt-[1rem] p-[1rem] hover:bg-green-400">
+        Check out my work
+      </button>
+      <div className="flex justify-center gap-6 mt-6">
+        <a
+          href="https://github.com/NifemiSoneye"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaGithub className="text-2xl hover:text-green-400 transition-colors" />
+        </a>
+        <a
+          href="https://linkedin.com/in/yourusername"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaLinkedin className="text-2xl hover:text-green-400 transition-colors" />
+        </a>
+        <a href="https://x.com/AFCNIFEMI" target="_blank" rel="noreferrer">
+          <FaTwitter className="text-2xl hover:text-green-400 transition-colors" />
+        </a>
+      </div>
     </section>
   );
 };
