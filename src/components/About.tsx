@@ -3,12 +3,15 @@ import { useRef } from "react";
 
 const About = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, margin: "-100px" });
+  const isInView = useInView(ref, {
+    once: false,
+    amount: 0.5,
+  });
   const variants: Variants = {
-    hidden: { opacity: 0, y: 100 }, // start off invisible & below
+    hidden: { opacity: 0, x: 50 }, // start off invisible & below
     visible: {
       opacity: 1,
-      y: 0,
+      x: 0,
       transition: { duration: 0.8, ease: "easeOut" },
     },
   };
@@ -17,7 +20,7 @@ const About = () => {
       <section
         id="about"
         ref={ref} // 👈 attach reference
-        className="min-h-screen bg-[#1a1c20] text-white "
+        className="min-h-screen bg-[#1a1c20] text-white overflow-x-hidden"
       >
         <motion.div
           variants={variants}
@@ -32,8 +35,46 @@ const About = () => {
             I'm a frontend developer passionate about building smooth, modern,
             and user-friendly web experiences. I enjoy solving UI problems and
             crafting animations that bring designs to life. I love creating well
-            organized, responsive and beautiful websites.
+            organized, responsive and beautiful websites. I prioritize
+            optimization without compromising on creating engaging user
+            interfaces.
           </p>
+          <p className="text-white leading-relaxed text-lg text-left font-semibold pt-[2rem]">
+            I'm a big team player and I believe effective communication and team
+            work can make the improbable , possible
+          </p>
+          <div>
+            <div className="border text-left p-[1rem] mt-[1rem]">
+              <p className="font-semibold text-[24px] mb-[1rem]">
+                Frontend development
+              </p>
+              <p className="font-semibold mb-[2rem]">
+                I develop performance based and intriguing websites that
+                performs its purpose while captivating and prioritizing user
+                experience
+              </p>
+            </div>
+            <div className="border text-left p-[1rem] mt-[1rem]">
+              <p className="font-semibold text-[24px] mb-[1rem]">
+                Frontend development
+              </p>
+              <p className="font-semibold mb-[2rem]">
+                I develop performance based and intriguing websites that
+                performs its purpose while captivating and prioritizing user
+                experience
+              </p>
+            </div>
+            <div className="border text-left p-[1rem] mt-[1rem]">
+              <p className="font-semibold text-[24px] mb-[1rem]">
+                Frontend development
+              </p>
+              <p className="font-semibold mb-[2rem]">
+                I develop performance based and intriguing websites that
+                performs its purpose while captivating and prioritizing user
+                experience
+              </p>
+            </div>
+          </div>
         </motion.div>
       </section>
     </div>
