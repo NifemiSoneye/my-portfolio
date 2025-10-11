@@ -34,38 +34,40 @@ const About = () => {
       <section
         id="about"
         ref={ref} // 👈 attach reference
-        className="min-h-screen bg-[#1a1c20] text-white overflow-x-hidden"
+        className="min-h-screen bg-[#1a1c20] text-white overflow-x-hidden border-b border-gray-500 pb-[1rem]"
       >
         <motion.div
           variants={variants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"} // 👈 animate when in view
-          className="max-w-xl text-center p-6 "
+          className="flex flex-col justify-center  min-h-screen max-w-3xl mx-auto px-6"
         >
-          <h2 className="text-[48px] opacity-50 text-green-400 font-bold my-[4rem] ">
+          <h2 className="text-[48px] opacity-50 text-green-400 font-bold my-[4rem] w-full text-left lg:ml-[-10rem] lg:text-[8rem]">
             About Me
           </h2>
-          <p className="text-white leading-relaxed text-lg text-left font-semibold">
-            I'm a 4th year Electronics and Computer engineering student who
-            doubles as a frontend developer passionate about building smooth,
-            modern, and user-friendly web experiences. I enjoy solving UI
-            problems and crafting animations that bring designs to life. I love
-            creating well organized, responsive and beautiful websites. I
-            prioritize optimization without compromising on creating engaging
-            user interfaces.
-          </p>
-          <p className="text-white leading-relaxed text-lg text-left font-semibold pt-[2rem]">
-            I'm a big team player and I believe effective communication and team
-            work can make the improbable , possible
-          </p>
-          <p className="text-white leading-relaxed text-lg text-left font-semibold pt-[2rem]">
-            My journey into frontend development started out of curiosity for
-            how design turns into interactive experiences. Since then, I've been
-            obsessed with transforming ideas into functional, elegant, and
-            accessible web applications.
-          </p>
+          <div className="text-left lg:flex lg:flex-col lg:items-center lg:justify-center">
+            <p className="text-white leading-relaxed text-lg font-semibold">
+              I'm a 4th year Electronics and Computer engineering student who
+              doubles as a frontend developer passionate about building smooth,
+              modern, and user-friendly web experiences. I enjoy solving UI
+              problems and crafting animations that bring designs to life. I
+              love creating well organized, responsive and beautiful websites. I
+              prioritize optimization without compromising on creating engaging
+              user interfaces.
+            </p>
+            <p className="text-white leading-relaxed text-lg font-semibold pt-[2rem]">
+              I'm a big team player and I believe effective communication and
+              team work can make the improbable , possible
+            </p>
+            <p className="text-white leading-relaxed text-lg font-semibold pt-[2rem]">
+              My journey into frontend development started out of curiosity for
+              how design turns into interactive experiences. Since then, I've
+              been obsessed with transforming ideas into functional, elegant,
+              and accessible web applications.
+            </p>
+          </div>
         </motion.div>
-        <div className="max-w-xl mx-auto p-6 overflow-hidden">
+        <div className=" mx-auto p-6 overflow-hidden grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl">
           {sections.map((section, index) => {
             const cardRef = useRef(null);
             const cardInView = useInView(cardRef, { once: false, amount: 0.4 });
@@ -73,7 +75,8 @@ const About = () => {
               <motion.div
                 key={index}
                 ref={cardRef}
-                className="border text-left p-[1rem] mt-[1rem]"
+                whileHover={{ scale: 1.03 }}
+                className="border text-left p-[1rem] "
                 initial={{ opacity: 0, y: 50 }}
                 animate={
                   cardInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
