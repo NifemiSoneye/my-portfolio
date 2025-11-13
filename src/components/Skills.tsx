@@ -17,6 +17,17 @@ const Skills = () => {
       transition: { duration: 0.8, ease: "easeOut" },
     },
   };
+  const skills = [
+    "HTML",
+    "CSS",
+    "JAVASCRIPT",
+    "REACT",
+    "TAILWIND",
+    "TYPESCRIPT",
+    "AXIOS",
+    "REDUX",
+    "GIT",
+  ];
   return (
     <section
       id="skills"
@@ -63,6 +74,33 @@ const Skills = () => {
           myself to learn something new with every project I take on.
         </p>
       </motion.div>
+      <p className="text-center text-white leading-relaxed text-md font-semibold mb-[0.5rem]">
+        Here are the technologies I most commonly use{" "}
+      </p>
+      <div className=" mx-auto p-6 overflow-hidden grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl">
+        {skills.map((skill, index) => {
+          const skillsRef = useRef(null);
+          const cardInView = useInView(skillsRef, { once: false, amount: 0.4 });
+          return (
+            <motion.div
+              key={index}
+              ref={skillsRef}
+              whileHover={{ scale: 1.03 }}
+              className="border text-left p-[1rem] "
+              initial={{ opacity: 0, y: 50 }}
+              animate={
+                cardInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
+              }
+              transition={{
+                duration: 0.7,
+                type: "spring",
+              }}
+            >
+              <p className="font-semibold text-[24px] mb-[1rem]">{skill}</p>
+            </motion.div>
+          );
+        })}
+      </div>
     </section>
   );
 };
