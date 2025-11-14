@@ -83,9 +83,11 @@ const Projects = () => {
           animate={isInView ? "visible" : "hidden"} // 👈 animate when in view
           className="flex flex-col justify-center max-w-3xl mx-auto px-6"
         >
-          <h2 className="text-[48px] opacity-50 text-green-400 font-bold my-[4rem] w-full lg:ml-[-10rem] lg:text-[8rem]">
-            My Projects
-          </h2>
+          <div className="flex justify-start max-w-7xl mx-auto px-6">
+            <h2 className="text-[48px] lg:text-[8rem] opacity-70 text-green-400 font-bold my-[4rem] text-nowrap">
+              My Projects
+            </h2>
+          </div>
         </motion.div>
         <div className="flex flex-col">
           {projects.map((project, index) => {
@@ -103,11 +105,11 @@ const Projects = () => {
                   projectInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
                 }
                 transition={{ duration: 0.7, type: "spring" }}
-                className="flex-col lg:flex-row items-center justify-center gap-6 my-12 px-4 max-w-6xl mx-auto min-h-[40vh]"
+                className="flex-col lg:flex-row items-center justify-center gap-6 my-12 px-4 max-w-7xl mx-auto min-h-[40vh] w-full"
               >
-                <div className="flex items-center justify-start flex-col-reverse">
+                <div className="flex items-center  flex-col-reverse lg:grid lg:grid-cols-2 lg:gap-12">
                   <div>
-                    <h3 className="text-xl font-bold">{project.title}</h3>
+                    <h3 className="text-[22px] font-bold ">{project.title}</h3>
                     <p className="text-[22px]">{project.desc}</p>
                     <div className="flex mt-[1rem] ml-[1rem]">
                       <a
@@ -124,16 +126,16 @@ const Projects = () => {
                       </a>
                     </div>
                   </div>
-                  <div className="flex items-start relative">
+                  <div className="flex items-center relative">
                     <img
                       src={project.desktopImg}
                       alt={`${project.title} mobile`}
-                      className="w-[500px] h-[350px]"
+                      className="w-[500px] h-[350px] lg:w-[800px] lg:h-[528px]"
                     />
                     <img
                       src={project.mobileImg}
                       alt={`${project.title} desktop`}
-                      className="w-[100px] h-[202px] absolute left-[70%] bottom-[10%]"
+                      className="w-[100px] h-[202px] absolute left-[70%] bottom-[10%] lg:left-[80%] -translate-x-1/2 lg:w-[150px] lg:h-[300px]"
                     />
                   </div>
                 </div>
