@@ -47,6 +47,7 @@ const Skills = () => {
             duration: 20, // slower rotation, adjust to your liking
             ease: "linear",
           }}
+          loading="lazy"
         />
       </div>
       <motion.div
@@ -56,7 +57,7 @@ const Skills = () => {
         animate={isInView ? "visible" : "hidden"} // 👈 animate when in view
         className="flex flex-col justify-center max-w-3xl mx-auto px-6"
       >
-        <h2 className="text-[48px] opacity-70 text-green-400 font-bold my-[4rem] w-full lg:ml-[-10rem] lg:text-[8rem]">
+        <h2 className="text-[48px] opacity-70 text-green-400 font-bold my-[4rem] w-full lg:ml-[-10rem] lg:text-[6rem]">
           My Skills
         </h2>
         <p className="text-white leading-relaxed text-lg font-semibold mb-[0.5rem]">

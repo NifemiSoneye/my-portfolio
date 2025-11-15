@@ -1,13 +1,21 @@
 import { Link } from "react-scroll";
+import { useState } from "react";
 const Nav = () => {
   const navLinks = ["home", "about", "skills", "projects", "contact"];
   const menuIcon = new URL("../assets/icon-hamburger.svg", import.meta.url)
     .href;
+  const closeIcon = new URL("../assets/icon-close.svg", import.meta.url).href;
   const [mobileNav, setMobileNav] = useState(false);
+  const linkBase =
+    "relative pb-2 text-white hover:after:opacity-30 after:absolute after:bottom-0 after:left-0 after:h-[3px] after:w-full after:bg-white after:transition-opacity after:duration-300";
+
+  const activeLink = "after:opacity-100 font-semibold";
+  const mobileLinkBase =
+    "relative pb-2 text-white text-2xl py-4 px-6 hover:text-green-400 border-b border-gray-600";
   return (
     <div className="backdrop-blur-md fixed top-0 left-0 w-full  border-b border-gray-600 bg-[#111113]/60 z-50">
       <div className="flex justify-between mt-[1rem] text-white pb-[1rem] lg:mt-[2rem] items-center lg:mx-[1.5rem]">
-        <h1 className="text-[1.5rem]">NIFEMI.DEV</h1>
+        <h1 className="text-[1.5rem] px-[0.5rem]">NIFEMI.DEV</h1>
         <ul className="hidden lg:flex mx-[2rem] text-[22px] ">
           {navLinks.map((link) => (
             <li key={link} className="capitalize cursor-pointer">
@@ -24,8 +32,83 @@ const Nav = () => {
           ))}
         </ul>
         <div className="lg:hidden flex mx-[1rem]">
-          <img src={menuIcon} alt="menu" className="h-[30px]" />
+          <img
+            src={menuIcon}
+            alt="menu"
+            className="h-[30px]"
+            onClick={(e) => setMobileNav(true)}
+          />
         </div>
+        <div
+          className={`lg:hidden flex flex-col w-[70vw] h-screen fixed top-0 right-0  z-40 backdrop-blur-[40.8px] +shadow-xl bg-[#0c0c0e] transition-transform duration-300 ease-in-out capitalize ${
+            mobileNav ? "translate-x-0" : "translate-x-full"
+          } `}
+        >
+          <div className="flex justify-end pt-[1rem] pr-[1rem] pb-24">
+            <img
+              src={closeIcon}
+              alt="close"
+              className="h-[30px] w-[30px]"
+              onClick={(e) => setMobileNav(false)}
+            />
+          </div>
+          {navLinks.map((link) => (
+            <Link
+              key={link}
+              to={link}
+              smooth={true}
+              duration={700}
+              offset={-80}
+              className={mobileLinkBase}
+              onClick={() => setMobileNav(false)} // close menu on click
+            >
+              {link}
+            </Link>
+          ))}
+        </div>
+        {/*         <div className="bg-transparent flex flex-col min-w-[70vw] pl-[2rem] pt-[5rem]">
+          <a
+            to="/"
+            end
+            className={({ isActive }) =>
+              `${mobileLinkBase} ${isActive ? activeLink : "after:opacity-0"}`
+            }
+          >
+             Home
+          </a>
+          <a
+            to="/destination"
+            className={({ isActive }) =>
+              `${mobileLinkBase} ${isActive ? activeLink : "after:opacity-0"}`
+            }
+          >
+            About
+          </a>
+          <a
+            to="/crew"
+            className={({ isActive }) =>
+              `${mobileLinkBase} ${isActive ? activeLink : "after:opacity-0"}`
+            }
+          >
+              Skills
+          </a>
+          <a
+            to="/technology"
+            className={({ isActive }) =>
+              `${mobileLinkBase} ${isActive ? activeLink : "after:opacity-0"}`
+            }
+          >
+            Projects
+          </a>
+          <a
+            to="/technology"
+            className={({ isActive }) =>
+              `${mobileLinkBase} ${isActive ? activeLink : "after:opacity-0"}`
+            }
+          >
+            Contact
+          </a>
+        </div> */}
       </div>
     </div>
   );

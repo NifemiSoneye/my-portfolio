@@ -42,7 +42,7 @@ const About = () => {
           animate={isInView ? "visible" : "hidden"} // 👈 animate when in view
           className="flex flex-col justify-center  min-h-screen max-w-3xl mx-auto px-6"
         >
-          <h2 className="text-[48px] opacity-70 text-green-400 font-bold my-[4rem] w-full text-left lg:ml-[-10rem] lg:text-[8rem]">
+          <h2 className="text-[48px] opacity-70 text-green-400 font-bold my-[4rem] w-full text-left lg:ml-[-10rem] lg:text-[6rem]">
             About Me
           </h2>
           <div className="text-left lg:flex lg:flex-col lg:items-center lg:justify-center">

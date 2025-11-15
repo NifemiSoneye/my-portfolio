@@ -60,7 +60,7 @@ const Home = () => {
               <FaGithub className="text-2xl hover:text-green-400 transition-colors" />
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/nifemi-soneye-07269b347/"
               target="_blank"
               rel="noreferrer"
             >
@@ -91,7 +91,7 @@ const Home = () => {
         <p className="italic mt-[1rem] lg:mt-0">
           "Build for everyone with everyone"
         </p>
-        <button className="bg-transparent border mt-[1rem] p-[1rem] hover:bg-green-400">
+        <button className="bg-transparent border mt-[1rem] p-[1rem]">
           Check out my work
         </button>
         <div className="flex justify-center gap-6 mt-6">

@@ -34,7 +34,7 @@ const ContactForm = () => {
         className="flex flex-col justify-center max-w-3xl mx-auto px-6 lg:ml-[3rem]"
       >
         <div className="flex justify-start max-w-7xl mx-auto px-6">
-          <h2 className="text-[48px] lg:text-[8rem] opacity-70 text-green-400 font-bold my-[4rem] text-nowrap">
+          <h2 className="text-[48px] lg:text-[6rem] opacity-70 text-green-400 font-bold my-[4rem] text-nowrap">
             Contact Me
           </h2>
         </div>
@@ -119,34 +119,40 @@ const ContactForm = () => {
           </h2>
           <p>
             Email:{" "}
-            <a href="mailto:your.email@example.com" className="text-green-400">
+            <a
+              href="mailto:nifemisoneye@gmail.com"
+              className="hover:text-green-400 text-white"
+            >
               soneyenifemi@gamil.com
             </a>
           </p>
           <p>
             Phone:{" "}
-            <a href="tel:+1234567890" className="text-green-400">
+            <a
+              href="tel:+2347085897934"
+              className="hover:text-green-400 text-white"
+            >
               +234 708 589 7934
             </a>
           </p>
           <p>Location: Lagos, Nigeria</p>
           <div className="flex gap-4 text-2xl mt-4">
             <a
-              href="https://linkedin.com/in/yourprofile"
+              href="https://www.linkedin.com/in/nifemi-soneye-07269b347/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaLinkedin />
             </a>
             <a
-              href="https://github.com/yourprofile"
+              href="https://github.com/NifemiSoneye"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaGithub />
             </a>
             <a
-              href="https://twitter.com/yourprofile"
+              href="https://x.com/AFCNIFEMI"
               target="_blank"
               rel="noopener noreferrer"
             >
