@@ -1,4 +1,3 @@
-import React from "react";
 import { motion, useInView, type Variants } from "framer-motion";
 import { useRef } from "react";
 
@@ -9,14 +8,6 @@ const Projects = () => {
       opacity: 1,
       y: 0,
       transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
-  const projectVariants: Variants = {
-    hidden: { opacity: 0, x: 50 }, // start off invisible & below
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 1, ease: "easeOut" },
     },
   };
   const ref = useRef(null);

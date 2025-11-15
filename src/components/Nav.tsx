@@ -6,10 +6,6 @@ const Nav = () => {
     .href;
   const closeIcon = new URL("../assets/icon-close.svg", import.meta.url).href;
   const [mobileNav, setMobileNav] = useState(false);
-  const linkBase =
-    "relative pb-2 text-white hover:after:opacity-30 after:absolute after:bottom-0 after:left-0 after:h-[3px] after:w-full after:bg-white after:transition-opacity after:duration-300";
-
-  const activeLink = "after:opacity-100 font-semibold";
   const mobileLinkBase =
     "relative pb-2 text-white text-2xl py-4 px-6 hover:text-green-400 border-b border-gray-600";
   return (
@@ -36,7 +32,7 @@ const Nav = () => {
             src={menuIcon}
             alt="menu"
             className="h-[30px]"
-            onClick={(e) => setMobileNav(true)}
+            onClick={() => setMobileNav(true)}
           />
         </div>
         <div
@@ -49,7 +45,7 @@ const Nav = () => {
               src={closeIcon}
               alt="close"
               className="h-[30px] w-[30px]"
-              onClick={(e) => setMobileNav(false)}
+              onClick={() => setMobileNav(false)}
             />
           </div>
           {navLinks.map((link) => (

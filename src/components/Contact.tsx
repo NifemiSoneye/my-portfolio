@@ -1,6 +1,4 @@
-import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
-import { section } from "framer-motion/client";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { motion, useInView, type Variants } from "framer-motion";
 import { useRef } from "react";
