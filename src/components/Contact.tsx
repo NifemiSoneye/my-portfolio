@@ -121,7 +121,7 @@ const ContactForm = () => {
               href="mailto:nifemisoneye@gmail.com"
               className="hover:text-green-400 text-white"
             >
-              soneyenifemi@gamil.com
+              soneyenifemi@gmail.com
             </a>
           </p>
           <p>
