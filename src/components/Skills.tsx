@@ -56,7 +56,7 @@ const Skills = () => {
         animate={isInView ? "visible" : "hidden"} // 👈 animate when in view
         className="flex flex-col justify-center max-w-3xl mx-auto px-6"
       >
-        <h2 className="text-[48px] opacity-50 text-green-400 font-bold my-[4rem] w-full lg:ml-[-10rem] lg:text-[8rem]">
+        <h2 className="text-[48px] opacity-70 text-green-400 font-bold my-[4rem] w-full lg:ml-[-10rem] lg:text-[8rem]">
           My Skills
         </h2>
         <p className="text-white leading-relaxed text-lg font-semibold mb-[0.5rem]">
@@ -76,10 +76,11 @@ const Skills = () => {
           skills and grow into a full-stack developer. I enjoy challenging
           myself to learn something new with every project I take on.
         </p>
+        <p className=" text-white leading-relaxed text-lg font-semibold mb-[0.5rem]">
+          Here are the technologies I most commonly use :{" "}
+        </p>
       </motion.div>
-      <p className="text-center text-white leading-relaxed text-md font-semibold mb-[0.5rem]">
-        Here are the technologies I most commonly use{" "}
-      </p>
+
       <div className=" mx-auto p-6 overflow-hidden grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl">
         {skills.map((skill, index) => {
           const skillsRef = useRef(null);
@@ -89,7 +90,7 @@ const Skills = () => {
               key={index}
               ref={skillsRef}
               whileHover={{ scale: 1.03 }}
-              className="border text-left p-[1rem] "
+              className="border-b text-left p-[1rem] "
               initial={{ opacity: 0, y: 50 }}
               animate={
                 cardInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
@@ -104,7 +105,6 @@ const Skills = () => {
           );
         })}
       </div>
-      
     </section>
   );
 };

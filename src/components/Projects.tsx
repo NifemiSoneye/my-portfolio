@@ -16,7 +16,7 @@ const Projects = () => {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
+      transition: { duration: 1, ease: "easeOut" },
     },
   };
   const ref = useRef(null);
@@ -100,9 +100,9 @@ const Projects = () => {
               <motion.div
                 key={index}
                 ref={projectRef}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, x: 50 }}
                 animate={
-                  projectInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
+                  projectInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }
                 }
                 transition={{ duration: 0.7, type: "spring" }}
                 className="flex-col lg:flex-row items-center justify-center gap-6 my-12 px-4 max-w-7xl mx-auto min-h-[40vh] w-full"

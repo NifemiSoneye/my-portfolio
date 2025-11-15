@@ -42,7 +42,7 @@ const About = () => {
           animate={isInView ? "visible" : "hidden"} // 👈 animate when in view
           className="flex flex-col justify-center  min-h-screen max-w-3xl mx-auto px-6"
         >
-          <h2 className="text-[48px] opacity-50 text-green-400 font-bold my-[4rem] w-full text-left lg:ml-[-10rem] lg:text-[8rem]">
+          <h2 className="text-[48px] opacity-70 text-green-400 font-bold my-[4rem] w-full text-left lg:ml-[-10rem] lg:text-[8rem]">
             About Me
           </h2>
           <div className="text-left lg:flex lg:flex-col lg:items-center lg:justify-center">
@@ -57,7 +57,7 @@ const About = () => {
             </p>
             <p className="text-white leading-relaxed text-lg font-semibold pt-[2rem]">
               I'm a big team player and I believe effective communication and
-              team work can make the improbable , possible
+              team work can make the improbable , possible.
             </p>
             <p className="text-white leading-relaxed text-lg font-semibold pt-[2rem]">
               My journey into frontend development started out of curiosity for
