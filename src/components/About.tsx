@@ -47,13 +47,13 @@ const About = () => {
           </h2>
           <div className="text-left lg:flex lg:flex-col lg:items-center lg:justify-center">
             <p className="text-white leading-relaxed text-lg font-semibold">
-              I'm a 4th year Electronics and Computer engineering student who
-              doubles as a frontend developer passionate about building smooth,
-              modern, and user-friendly web experiences. I enjoy solving UI
-              problems and crafting animations that bring designs to life. I
-              love creating well organized, responsive and beautiful websites. I
-              prioritize optimization without compromising on creating engaging
-              user interfaces.
+              I'm an Electronics and Computer engineering student who doubles as
+              a frontend developer passionate about building smooth, modern, and
+              user-friendly web experiences. I enjoy solving UI problems and
+              crafting animations that bring designs to life. I love creating
+              well organized, responsive and beautiful websites. I prioritize
+              optimization without compromising on creating engaging user
+              interfaces.
             </p>
             <p className="text-white leading-relaxed text-lg font-semibold pt-[2rem]">
               I'm a big team player and I believe effective communication and
