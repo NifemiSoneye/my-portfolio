@@ -1,4 +1,3 @@
-import React from "react";
 import { motion, useInView, type Variants } from "framer-motion";
 import { useRef } from "react";
 
