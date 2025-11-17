@@ -77,7 +77,7 @@ const Home = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 1.2, duration: 0.8, type: "spring" }}
-          className="h-[300px] w-[300px] rounded-full bg-[#212A37] border-2 border-[#222428] flex items-center justify-center p-[1rem] lg:h-[400px] lg:w-[400px] "
+          className="h-[300px] w-[300px] rounded-full bg-[#2a3647] border-2 border-[#222428] flex items-center justify-center p-[1rem] lg:h-[400px] lg:w-[400px] "
         >
           <img
             src={devIcon}
