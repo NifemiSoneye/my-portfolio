@@ -95,7 +95,7 @@ const Projects = () => {
                 animate={
                   projectInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }
                 }
-                transition={{ duration: 0.7, ease: "easeOut" }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
                 className="flex-col lg:flex-row items-center justify-center gap-6 my-12 px-4 max-w-7xl mx-auto min-h-[40vh] w-full"
               >
                 <div className="flex items-center  flex-col-reverse lg:grid lg:grid-cols-2 lg:gap-12">
