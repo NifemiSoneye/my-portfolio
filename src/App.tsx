@@ -8,17 +8,15 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <>
-      <div className="bg-[#222428] min-h-screen">
-        <Nav />
-        <Home />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
-        <Footer />
-      </div>
-    </>
+    <div className="bg-[#222428] min-h-screen">
+      <Nav />
+      <Home />
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
+      <Footer />
+    </div>
   );
 }
 
