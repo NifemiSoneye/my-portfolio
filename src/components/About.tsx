@@ -17,16 +17,16 @@ const About = () => {
   };
   const sections = [
     {
-      title: "Frontend Development",
-      text: "I develop performance-based and engaging websites that perform their purpose while prioritizing user experience and accessibility.",
+      title: "Fullstack Development",
+      text: "I build complete web applications from REST APIs and databases to responsive, accessible UIs — shipping features that work reliably across the entire stack.",
     },
     {
       title: "Design Philosophy",
-      text: "I focus on creating interfaces that are not only visually appealing but intuitive and purposeful, ensuring every interaction feels smooth and natural.",
+      text: "I focus on building interfaces that are intuitive and purposeful — clean layouts, smooth interactions, and UIs that feel natural to use",
     },
     {
-      title: "Continuous Growth",
-      text: "I’m always learning — currently exploring backend development with Node.js and expanding into the full MERN stack to become a well-rounded full stack developer.",
+      title: "Always Evolving",
+      text: "I'm continuously expanding my stack — currently working with Next.js 15, PostgreSQL, and AI integrations, and actively building projects that push me into new territory.",
     },
   ];
   return (
@@ -47,23 +47,22 @@ const About = () => {
           </h2>
           <div className="text-left lg:flex lg:flex-col lg:items-center lg:justify-center">
             <p className="text-white leading-relaxed text-lg font-semibold">
-              I'm an Electronics and Computer engineering student who doubles as
-              a frontend developer passionate about building smooth, modern, and
-              user-friendly web experiences. I enjoy solving UI problems and
-              crafting animations that bring designs to life. I love creating
-              well organized, responsive and beautiful websites. I prioritize
-              optimization without compromising on creating engaging user
-              interfaces.
+              I'm a fullstack developer based in Lagos, building
+              production-ready web applications with React, Node.js, and
+              Next.js. I've shipped multiple fullstack projects including a
+              real-time Kanban task manager, an inventory tracking system, and
+              an event registration platform — all deployed and live.
             </p>
             <p className="text-white leading-relaxed text-lg font-semibold pt-[2rem]">
-              I'm a big team player and I believe effective communication and
-              team work can make the improbable , possible.
+              I enjoy working across the entire stack, from designing REST APIs
+              and managing databases to crafting clean, responsive UIs. I care
+              about writing maintainable code and building things that actually
+              work well for users.
             </p>
             <p className="text-white leading-relaxed text-lg font-semibold pt-[2rem]">
-              My journey into frontend development started out of curiosity for
-              how design turns into interactive experiences. Since then, I've
-              been obsessed with transforming ideas into functional, elegant,
-              and accessible web applications.
+              I'm currently expanding into Next.js 15, PostgreSQL, and AI
+              integrations, and actively looking for remote fullstack roles
+              where I can contribute and keep growing.
             </p>
           </div>
         </motion.div>

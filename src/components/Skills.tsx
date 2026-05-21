@@ -1,5 +1,6 @@
 import { motion, useInView, type Variants } from "framer-motion";
 import { useRef } from "react";
+import TechOrbit from "./TechOrbit";
 
 const Skills = () => {
   const planetIcon = new URL("../assets/planet.png", import.meta.url).href;
@@ -36,7 +37,7 @@ const Skills = () => {
       className="min-h-screen bg-[#161619] text-white overflow-x-hidden border-b border-gray-500 pb-[1rem] "
     >
       <div className="w-full flex justify-center">
-        <motion.img
+        {/* <motion.img
           src={planetIcon}
           alt="planet-icon"
           className="bg-transparent w-[250px] h-[250px]"
@@ -47,7 +48,8 @@ const Skills = () => {
             ease: "linear",
           }}
           loading="lazy"
-        />
+        /> */}
+        <TechOrbit />
       </div>
       <motion.div
         ref={ref}
