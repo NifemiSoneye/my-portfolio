@@ -42,14 +42,22 @@ const Home = () => {
           Nifemi
         </motion.span> */}
         </motion.h1>
-        <p className="text-[24px] pt-[2rem]">A Frontend Developer</p>
+        <p className="text-[24px] pt-[2rem]">A FullStack Developer</p>
         <div className="col-span-2 order-3 flex-col items-center mt-[1rem] lg:items-start lg:mt-[2rem] hidden lg:flex">
           <p className="italic mt-[1rem] lg:mt-0">
-            "Build for everyone with everyone"
+            "Building with React, Node.js and Next.js"
           </p>
-          <button className="bg-transparent border mt-[1rem] p-[1rem] hover:bg-green-400">
-            Check out my work
-          </button>
+          <div className="flex gap-4">
+            <button className="bg-transparent border mt-[1rem] p-[1rem] hover:bg-green-400">
+              Check out my work
+            </button>
+            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+              <button className="bg-transparent border mt-[1rem] p-[1rem] hover:bg-green-400 min-w-[10vw]">
+                View CV
+              </button>
+            </a>
+          </div>
+
           <div className="flex justify-center gap-6 mt-6">
             <a
               href="https://github.com/NifemiSoneye"
@@ -88,11 +96,18 @@ const Home = () => {
       </div>
       <div className="col-span-2 order-3 flex flex-col items-center mt-[1rem] lg:items-start lg:mt-[0.5rem] lg:hidden">
         <p className="italic mt-[1rem] lg:mt-0">
-          "Build for everyone with everyone"
+          "Building with React, Node.js and Next.js"
         </p>
-        <button className="bg-transparent border mt-[1rem] p-[1rem]">
-          Check out my work
-        </button>
+        <div className="flex gap-4">
+          <button className="bg-transparent border mt-[1rem] p-[1rem] hover:bg-green-400">
+            Check out my work
+          </button>
+          <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+            <button className="bg-transparent border mt-[1rem] p-[1rem] hover:bg-green-400 min-w-[10vw]">
+              View CV
+            </button>
+          </a>
+        </div>
         <div className="flex justify-center gap-6 mt-6">
           <a
             href="https://github.com/NifemiSoneye"
@@ -102,7 +117,7 @@ const Home = () => {
             <FaGithub className="text-2xl hover:text-green-400 transition-colors" />
           </a>
           <a
-            href="https://linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/nifemi-soneye-07269b347/"
             target="_blank"
             rel="noreferrer"
           >

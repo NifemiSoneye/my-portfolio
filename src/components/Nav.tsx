@@ -9,60 +9,69 @@ const Nav = () => {
   const mobileLinkBase =
     "relative pb-2 text-white text-2xl py-4 px-6 hover:text-green-400 border-b border-gray-600";
   return (
-    <div className="backdrop-blur-md fixed top-0 left-0 w-full  border-b border-gray-600 bg-[#111113]/60 z-50">
-      <div className="flex justify-between mt-[1rem] text-white pb-[1rem] lg:mt-[2rem] items-center lg:mx-[1.5rem]">
-        <h1 className="text-[1.5rem] px-[0.5rem]">NIFEMI.DEV</h1>
-        <ul className="hidden lg:flex mx-[2rem] text-[22px] ">
-          {navLinks.map((link) => (
-            <li key={link} className="capitalize cursor-pointer">
+    <>
+      {/* overlay - mobile only, outside the aside */}
+      {mobileNav && (
+        <div
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"
+          onClick={() => setMobileNav(false)}
+        />
+      )}
+      <div className="backdrop-blur-md fixed top-0 left-0 w-full  border-b border-gray-600 bg-[#111113]/60 z-50">
+        <div className="flex justify-between mt-[1rem] text-white pb-[1rem] lg:mt-[2rem] items-center lg:mx-[1.5rem]">
+          <h1 className="text-[1.5rem] px-[0.5rem]">NIFEMI.DEV</h1>
+          <ul className="hidden lg:flex mx-[2rem] text-[22px] ">
+            {navLinks.map((link) => (
+              <li key={link} className="capitalize cursor-pointer">
+                <Link
+                  to={link}
+                  smooth={true}
+                  duration={700}
+                  offset={-80}
+                  className="hover:text-green-400 ml-[1rem] text-white"
+                >
+                  {link}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div className="lg:hidden flex mx-[1rem]">
+            <img
+              src={menuIcon}
+              alt="menu"
+              className="h-[30px]"
+              onClick={() => setMobileNav(true)}
+            />
+          </div>
+          <div
+            className={`lg:hidden flex flex-col w-[70vw] h-screen fixed top-0 right-0  z-40 backdrop-blur-[40.8px] +shadow-xl bg-[#0c0c0e] transition-transform duration-300 ease-in-out capitalize ${
+              mobileNav ? "translate-x-0" : "translate-x-full"
+            } `}
+          >
+            <div className="flex justify-end pt-[1rem] pr-[1rem] pb-24">
+              <img
+                src={closeIcon}
+                alt="close"
+                className="h-[30px] w-[30px]"
+                onClick={() => setMobileNav(false)}
+              />
+            </div>
+
+            {navLinks.map((link) => (
               <Link
+                key={link}
                 to={link}
                 smooth={true}
                 duration={700}
                 offset={-80}
-                className="hover:text-green-400 ml-[1rem] text-white"
+                className={mobileLinkBase}
+                onClick={() => setMobileNav(false)} // close menu on click
               >
                 {link}
               </Link>
-            </li>
-          ))}
-        </ul>
-        <div className="lg:hidden flex mx-[1rem]">
-          <img
-            src={menuIcon}
-            alt="menu"
-            className="h-[30px]"
-            onClick={() => setMobileNav(true)}
-          />
-        </div>
-        <div
-          className={`lg:hidden flex flex-col w-[70vw] h-screen fixed top-0 right-0  z-40 backdrop-blur-[40.8px] +shadow-xl bg-[#0c0c0e] transition-transform duration-300 ease-in-out capitalize ${
-            mobileNav ? "translate-x-0" : "translate-x-full"
-          } `}
-        >
-          <div className="flex justify-end pt-[1rem] pr-[1rem] pb-24">
-            <img
-              src={closeIcon}
-              alt="close"
-              className="h-[30px] w-[30px]"
-              onClick={() => setMobileNav(false)}
-            />
+            ))}
           </div>
-          {navLinks.map((link) => (
-            <Link
-              key={link}
-              to={link}
-              smooth={true}
-              duration={700}
-              offset={-80}
-              className={mobileLinkBase}
-              onClick={() => setMobileNav(false)} // close menu on click
-            >
-              {link}
-            </Link>
-          ))}
-        </div>
-        {/*         <div className="bg-transparent flex flex-col min-w-[70vw] pl-[2rem] pt-[5rem]">
+          {/*         <div className="bg-transparent flex flex-col min-w-[70vw] pl-[2rem] pt-[5rem]">
           <a
             to="/"
             end
@@ -105,8 +114,9 @@ const Nav = () => {
             Contact
           </a>
         </div> */}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
