@@ -4,7 +4,6 @@ import TechOrbit from "./TechOrbit";
 import SkillTags from "./SkillTags";
 
 const Skills = () => {
-  const planetIcon = new URL("../assets/planet.png", import.meta.url).href;
   const ref = useRef(null);
   const isInView = useInView(ref, {
     once: false,
@@ -18,22 +17,6 @@ const Skills = () => {
       transition: { duration: 0.8, ease: "easeOut" },
     },
   };
-  const skillsRef = useRef(null);
-  const cardInView = useInView(skillsRef, { once: false, amount: 0.4 });
-  const skills = [
-    "HTML",
-    "CSS",
-    "JAVASCRIPT",
-    "REACT",
-    "TAILWIND",
-    "TYPESCRIPT",
-    "AXIOS",
-    "REDUX",
-    "GIT",
-    "VITE",
-    "VERCEL",
-    "FRAMER MOTION",
-  ];
   return (
     <section
       id="skills"

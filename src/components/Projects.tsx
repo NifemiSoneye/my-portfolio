@@ -17,6 +17,34 @@ const Projects = () => {
   });
   const projects = [
     {
+      title: "Task Manager",
+      desc: "A fullstack Kanban board application with drag-and-drop task management, JWT authentication, real-time board updates, and server-side pagination. Built with React, Typescript, Node.js, MongoDB, and RTK Query.",
+      mobileImg: new URL("../assets/task-manager-mobile.webp", import.meta.url)
+        .href,
+      desktopImg: new URL("../assets/task-manager-laptop.webp", import.meta.url)
+        .href,
+      demo: "https://task-manager-murex-ten-82.vercel.app/",
+      source: "https://github.com/NifemiSoneye/task-manager-frontend",
+    },
+    {
+      title: "Tech Meetup 2026 — Event Registration App",
+      desc: "A fullstack event registration platform with JWT auth, refresh token rotation, automated email confirmation via Resend, and an admin dashboard for attendee management. Built with React, Typescript, Node.js, and MongoDB.",
+      mobileImg: new URL("../assets/tech-event-mobile.webp", import.meta.url)
+        .href,
+      desktopImg: new URL("../assets/tech-event-laptop.webp", import.meta.url)
+        .href,
+      demo: "https://tech-event-teal.vercel.app/",
+      source: "https://github.com/NifemiSoneye/IT-events-project",
+    },
+    {
+      title: "Next.js Repair Shop",
+      desc: "A fullstack repair shop management app built with Next.js 15, PostgreSQL, Drizzle ORM, and Kinde auth. Features server actions with next-safe-action, TanStack Table, and Sentry error monitoring. Built for larger screens.",
+      desktopImg: new URL("../assets/tech-repair-laptop.webp", import.meta.url)
+        .href,
+      demo: "https://next-repair-shop-roan.vercel.app/login",
+      source: "https://github.com/NifemiSoneye/next-repair-shop",
+    },
+    {
       title: "IP-TRACKER",
       desc: " A utility web app that allows users to track IP addresses and see geolocation data on a map in real time. Built with React, Tailwind CSS, LeafletJS, and the IPify API, it demonstrates API integration, state management, and responsive UI design for practical tools.",
       mobileImg: new URL("../assets/IP-tracker-mobile.webp", import.meta.url)
@@ -27,40 +55,18 @@ const Projects = () => {
       source: "https://github.com/NifemiSoneye/IP_tracker",
     },
     {
-      title: "MULTI-FORM ",
-      desc: "A dynamic, responsive form that guides users through multiple steps with validation at each stage. Implemented using React, Tailwind CSS and Typescript it emphasizes form state handling, conditional rendering, and user-friendly feedback, showcasing polished frontend interactions as well as form validation and error handling.",
-      mobileImg: new URL("../assets/multi-form-mobile.webp", import.meta.url)
-        .href,
-      desktopImg: new URL("../assets/multi-form-desktop.webp", import.meta.url)
-        .href,
-      demo: "https://multi-step-form-kohl-kappa.vercel.app/",
-      source: "https://github.com/NifemiSoneye/Multi-step-form",
-    },
-    {
-      title: "SPACE-TOURISM WEBSITE",
-      desc: "A multi-page, responsive web project inspired by a space travel theme. Built with React and Tailwind CSS, it features smooth navigation, dynamic content, and immersive animations. Users can explore destinations, learn about crew members, and experience a visually rich, interactive interface.",
-      mobileImg: new URL("../assets/space-tourism-mobile.webp", import.meta.url)
-        .href,
-      desktopImg: new URL(
-        "../assets/space-tourism-desktop.webp",
-        import.meta.url,
-      ).href,
-      demo: "https://spacetourismsolution.netlify.app/",
-      source: "https://github.com/NifemiSoneye/Space_tourism",
-    },
-    {
-      title: "COUNTRY-API WEBSITE",
-      desc: "A responsive web app that displays data about countries using the REST Countries API. Built with React , Typescript and Tailwind CSS, it allows users to search, filter, and view detailed country information. The project highlights API integration, dynamic rendering, and a clean, user-friendly interface.",
+      title: "Inventory Tracker",
+      desc: " A fullstack inventory management dashboard with live stock status tracking, CRUD operations, debounced search, and client-side filtering. Built with React, Express, Typescript and MongoDB.",
       mobileImg: new URL(
-        "../assets/rest-countries-mobile.webp",
+        "../assets/inventory-tracker-mobile.webp",
         import.meta.url,
       ).href,
       desktopImg: new URL(
-        "../assets/rest-countries-desktop.webp",
+        "../assets/inventory-tracker-laptop.webp",
         import.meta.url,
       ).href,
-      demo: "https://rest-countries-app-wine.vercel.app/",
-      source: "http://github.com/NifemiSoneye/rest-countries-app",
+      demo: "https://inventory-tracker-frontend-jet.vercel.app/",
+      source: "https://github.com/NifemiSoneye/inventory-tracker-frontend",
     },
   ];
   return (
@@ -126,12 +132,14 @@ const Projects = () => {
                       className="w-[500px] h-[350px] lg:w-[800px] lg:h-[500px]"
                       loading="lazy"
                     />
-                    <img
-                      src={project.mobileImg}
-                      alt={`${project.title} desktop`}
-                      className="w-[100px] h-[202px] absolute left-[70%] bottom-[10%] lg:left-[80%] -translate-x-1/2 lg:w-[150px] lg:h-[300px]"
-                      loading="lazy"
-                    />
+                    {project.mobileImg ? (
+                      <img
+                        src={project.mobileImg}
+                        alt={`${project.title} desktop`}
+                        className="w-[100px] h-[202px] absolute left-[70%] bottom-[10%] lg:left-[80%] -translate-x-1/2 lg:w-[150px] lg:h-[300px]"
+                        loading="lazy"
+                      />
+                    ) : null}
                   </div>
                 </div>
               </motion.div>
