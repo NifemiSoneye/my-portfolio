@@ -45,7 +45,7 @@ const Home = () => {
         <p className="text-[24px] pt-[2rem]">A FullStack Developer</p>
         <div className="col-span-2 order-3 flex-col items-center mt-[1rem] lg:items-start lg:mt-[2rem] hidden lg:flex">
           <p className="italic mt-[1rem] lg:mt-0">
-            "Building with React, Node.js and Next.js"
+            Building with React, Node.js and Next.js
           </p>
           <div className="flex gap-4">
             <button className="bg-transparent border mt-[1rem] p-[1rem] hover:bg-green-400">
