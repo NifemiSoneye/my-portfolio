@@ -29,9 +29,9 @@ const ContactForm = () => {
         variants={variants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"} // 👈 animate when in view
-        className="flex flex-col justify-center max-w-3xl mx-auto px-6 lg:ml-[3rem]"
+        className="flex flex-col justify-center max-w-3xl mx-auto"
       >
-        <div className="flex justify-start max-w-7xl mx-auto px-6">
+        <div className="flex justify-start max-w-7xl mx-auto px-4">
           <h2 className="text-[48px] lg:text-[6rem] opacity-70 text-green-400 font-bold my-[4rem] text-nowrap">
             Contact Me
           </h2>
