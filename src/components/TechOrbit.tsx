@@ -1,5 +1,3 @@
-import { useEffect, useRef } from "react";
-
 const outerIcons = [
   { label: "React", bg: "#61DAFB", color: "#0c3547" },
   { label: "Node.js", bg: "#68A063", color: "#fff" },
