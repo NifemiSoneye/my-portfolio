@@ -96,7 +96,7 @@ const Home = () => {
       </div>
       <div className="col-span-2 order-3 flex flex-col items-center mt-[1rem] lg:items-start lg:mt-[0.5rem] lg:hidden">
         <p className="italic mt-[1rem] lg:mt-0">
-          "Building with React, Node.js and Next.js"
+          Building with React, Node.js and Next.js
         </p>
         <div className="flex gap-4">
           <button className="bg-transparent border mt-[1rem] p-[1rem] hover:bg-green-400">
